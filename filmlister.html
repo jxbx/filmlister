@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>API test</title>
-  <script src="./apitest.js" defer></script>
-  <link rel="stylesheet" href="./apitest.css">
+  <title>Film lister v0.1</title>
+  <script src="./filmlister.js" defer></script>
+  <link rel="stylesheet" href="./filmlister.css">
 </head>
 <body>
 <div id="searchBarContainer">
   <label for="searchBar">Search:</label>
-  <input list="searchList" type="search" id="searchBar" name="searchBar" onchange = "showCard(value)">
-  <datalist id="searchList">
-  </datalist>
+  <input list="searchList" type="search" id="searchBar" name="searchBar">
+  <ul id="searchList">
+  </ul>
 </div>
 
 <div id="cardContainer">

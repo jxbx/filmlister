@@ -1,9 +1,22 @@
 body {
   background-color: orange;
   font-family: sans-serif;
+  font-size: 15px;
+  display: flex;
 }
 
 li {
   background-color: white;
   border: 1px solid black;
+  width: 200px;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+.searchItemMoreInfo {
+  color: grey;
+  font-size: 13px;
 }
