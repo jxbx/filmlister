@@ -1,15 +1,45 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
 body {
   background-color: orange;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 0.8rem;
   display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  column-gap: 5rem;
+}
+
+ul {
+  padding: 0;
+}
+
+#searchList {
+  margin: 4rem 0 0 0;
+  width: inherit;
+}
+
+#cardInfo {
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
 }
 
 li {
-  background-color: white;
-  border: 1px solid black;
-  width: 200px;
+  background-color: none;
+  width: 100%;
   list-style-type: none;
+  color: white;
+  padding: 0 0 1rem 0;
 }
 
 p {
@@ -18,5 +48,50 @@ p {
 
 .searchItemMoreInfo {
   color: grey;
-  font-size: 13px;
+}
+
+#searchBarContainer{
+}
+
+#searchBar {
+  position: fixed;
+  height: 3rem;
+  background: #272654;
+  border: none;
+  color: white;
+  padding: 0 0 0 1rem;
+  width: inherit;
+}
+
+#mainContainer {
+  width: 25rem;
+  height: 100%;
+  background: black;
+}
+
+#cardImg {
+  width: 25rem;
+}
+
+#cardContainer, #diaryForm {
+  width: 25rem;
+  height: 100vh;
+  background: black;
+}
+
+.posterThumbnail {
+  height: 75px;
+  border: 1px solid grey;
+}
+
+.searchItem{
+  display: flex;
+  column-gap: 1rem;
+  margin: 1rem;
+  border-bottom: 1px solid grey;
+  width: auto;
+}
+
+.searchItemTitle {
+  font-weight: bold;
 }
