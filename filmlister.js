@@ -7,6 +7,9 @@ const cardContainer = document.getElementById("cardContainer");
 searchBar.addEventListener("input", clearSearch);
 searchBar.addEventListener("input", populate);
 
+let currentId = "";
+let diaryContent = [];
+
 function clearSearch() {
   while (searchList.hasChildNodes()) {
     searchList.removeChild(searchList.firstChild);
@@ -69,31 +72,25 @@ async function populate() {
 
 async function showCard() {
 
-
   while (cardContainer.firstChild) {
     cardContainer.removeChild(cardContainer.lastChild);
   }
-  console.log(this.value);
 
   const url = "https://api.themoviedb.org/3/movie/" + this.value + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
   const request = new Request(url);
   const response = await fetch(request);
   const movie = await response.json();
 
-  console.log(movie.original_title);
+  currentId = movie.id;
 
-  const moreInfo = [];
-
-
+  let moreInfo = [];
 
   moreInfo.push(movie.title);
   if(movie.original_language !== "en") moreInfo.push(movie.original_title);
   moreInfo.push(movie.release_date.slice(0,4));
   if (movie.spoken_languages.length >= 1) moreInfo.push(movie.spoken_languages[0].english_name);
-  moreInfo.push
 
   moreInfo.push(movie.overview);
-
 
   const cardImg = document.createElement("img");
   cardImg.src = "https://image.tmdb.org/t/p/w780" + movie.backdrop_path;
@@ -148,4 +145,8 @@ function clearCard() {
   while (cardContainer.firstChild) {
     cardContainer.removeChild(cardContainer.lastChild);
   }
+}
+
+function addToDiary() {
+ diaryContent.push(currentId);
 }
