@@ -17,44 +17,43 @@ body {
   justify-content: flex-start;
   margin: 0;
   column-gap: 5rem;
+  color: white;
 }
 
 ul {
   padding: 0;
+  list-style-type: none;
 }
 
-#searchList {
-  margin: 4rem 0 0 0;
-  width: inherit;
-}
-
-#cardInfo {
+.cardInfo {
   width: 100%;
   padding: 1rem;
   margin: 0;
 }
 
 li {
-  background-color: none;
   width: 100%;
-  list-style-type: none;
   color: white;
   padding: 0 0 1rem 0;
 }
 
 p {
   margin: 0;
+  color: white;
 }
 
 .searchItemMoreInfo {
   color: grey;
 }
 
-#searchBarContainer{
+#mainContainer {
+  background: black;
+  height: 100vh;
+  width: 25rem;
+  overflow: hidden;
 }
 
 #searchBar {
-  position: fixed;
   height: 3rem;
   background: #272654;
   border: none;
@@ -63,20 +62,20 @@ p {
   width: inherit;
 }
 
-#mainContainer {
-  width: 25rem;
-  height: 100%;
-  background: black;
-}
-
-#cardImg {
-  width: 25rem;
-}
-
-#cardContainer, #diaryForm {
-  width: 25rem;
+.container {
+  width: 100%;
   height: 100vh;
+}
+
+#diaryContainer {
+  height: 100vh;
+  width: 25rem;
   background: black;
+  overflow-y: scroll;
+}
+
+.cardImg {
+  width: 25rem;
 }
 
 .posterThumbnail {
@@ -84,7 +83,7 @@ p {
   border: 1px solid grey;
 }
 
-.searchItem{
+.searchItem, .diaryItem{
   display: flex;
   column-gap: 1rem;
   margin: 1rem;
@@ -92,6 +91,128 @@ p {
   width: auto;
 }
 
+.searchItem:hover, .diaryItem:hover {
+  cursor: pointer;
+}
+
 .searchItemTitle {
   font-weight: bold;
+}
+
+#formContainer {
+  display: none;
+}
+
+#filmSubmitForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+}
+
+#ratingsInput {
+  margin-top: 1rem;
+  background: red;
+  display: flex;
+  border: none;
+  justify-content: center;
+}
+
+#ratingsInput input[type="radio"] {
+  z-index: 1;
+  opacity: 0;
+  margin-right: -0.7rem;
+}
+
+#ratingsInput label {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 0.5rem;
+  border-radius: 50%;
+  background: grey;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.removeButton {
+  margin-left: auto;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  padding: none;
+  cursor: pointer;
+}
+
+.viewOrder {
+  font-size: 2rem;
+}
+
+.dateAndOrder {
+  width: 2.5rem;
+}
+
+#ratingContainer {
+  width: 9rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#starsGraphic {
+  height: 1.5rem;
+  width: 9rem;
+  z-index: 1;
+  fill: black;
+}
+
+#ratingGreyBg {
+  width: 8.5rem;
+  height: 1.35rem;
+  background: #2e2e2e;
+
+  position: absolute;
+  left: 0.1rem;
+}
+
+#ratingYellowBg {
+  width: 0;
+  height: 1.35rem;
+  background: white;
+
+  position: absolute;
+  left: 0.2rem;
+  top: 0.05rem;
+}
+
+#ratingInput {
+  width: 9rem;
+  height: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  opacity:0;
+}
+
+textarea {
+  width: 100%;
+  height: 20rem;
+  background: #2e2e2e;
+  resize: none;
+  color: white;
+  border: none;
+}
+
+#sortContainer {
+  height: 3rem;
+  background: #2e2e2e;
+  padding: 1rem;
+  position: fixed;
+  width: inherit;
+  z-index: 1;
+}
+
+#diaryList {
+  display: block;
+  padding: 2rem 0 0 0;
 }

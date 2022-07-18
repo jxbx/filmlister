@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Film stats v0.1</title>
+  <script src="./justindiary.js" defer></script>
+  <script src="./stats.js" defer></script>
+</head>
+
+
+<style>
+
+  body{
+    font-family: "arial", sans-serif;
+  }
+  .bar {
+  height: 1rem;
+  background: red;
+  }
+
+  .horizontalBar {
+    background: red;
+    width: 0.5rem;
+  }
+
+  .horizontalBarBlue {
+    background: blue;
+    width: 0.5rem;
+    position: fixed;
+    opacity: 0.5;
+  }
+
+ .container {
+  background: #e5e5e5;
+  margin: 0 0 1rem 0;
+  width: 40rem;
+  padding: 1rem;
+  }
+
+  #doubleGraphContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+  }
+</style>
+
+<body>
+
+  <div id="ratingsContainer" class="container">
+    <h1 id="ratingsTitle"></h1>
+  </div>
+
+  <div id="ratingsContainer2" class="container">
+    <h1 id="ratingsTitle2">My ratings vs TMDB user ratings</h1>
+    <div id="doubleGraphContainer">
+    </div>
+  </div>
+
+  <div id="languagesContainer" class="container">
+    <h1 id="languagesTitle"></h1>
+  </div>
+
+</body>
+</html>
