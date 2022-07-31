@@ -58,7 +58,7 @@ async function populate() {
   if (searchBar.value === "") {
     return;
   } else {
-    const firstPartURL = "https://api.themoviedb.org/3/search/movie?api_key=f99dcdb2604d84233a9cf4e3f614828a&language=en-US&query=";
+    const firstPartURL = "https://api.themoviedb.org/3/search/movie?api_key=f99dcdb2604d84233a9cf4e3f614828a&language=en-UK&query=";
     let query = searchBar.value;
 
     const requestURL = firstPartURL + encodeURI(query);
