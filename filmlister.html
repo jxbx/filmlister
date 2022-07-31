@@ -51,16 +51,23 @@
 
   <div id="diaryContainer">
     <div id="sortContainer">
-      <label for="sortOptions">Sort ⇅</label>
-      <select name="sortOptions" id="sortOptions" onchange="updateDiary()">
-        <option value="dateNewest">date (newest first)</option>
-        <option value="dateOldest">date (oldest first)</option>
-        <option value="ratingLowest">rating (lowest first)</option>
-        <option value="ratingHighest">rating (highest first)</option>
-        <option value="az">A-Z</option>
-        <option value="za">Z-A</option>
-      </select>
+      <h1>Justin's film diary</h1>
+      <div>
+        <label for="sortOptions">Sort ⇅</label>
+        <select name="sortOptions" id="sortOptions" onchange="updateDiary()">
+          <option value="dateNewest">date (newest first)</option>
+          <option value="dateOldest">date (oldest first)</option>
+          <option value="ratingLowest">rating (lowest first)</option>
+          <option value="ratingHighest">rating (highest first)</option>
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+        </select>
+      </div>
+      <div>
+        <button id="addFilm">Add film</button>
+      </div>
     </div>
+
     <ul id="diaryList">
     </ul>
     <div id="diaryItemContainer">

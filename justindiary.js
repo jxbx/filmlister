@@ -1,5 +1,75 @@
 const justinDiary = [
     {
+        "id": 453270,
+        "date": "2022-07-30",
+        "review": "",
+        "rating": 3.5,
+        "title": "A Ciambra"
+    },
+    {
+        "id": 60567,
+        "date": "2022-07-27",
+        "review": "",
+        "rating": 4.5,
+        "title": "The Big City"
+    },
+    {
+        "id": 489471,
+        "date": "2022-07-25",
+        "review": "",
+        "rating": 2.5,
+        "title": "The Dawn Wall"
+    },
+    {
+        "id": 913814,
+        "date": "2022-07-25",
+        "review": "",
+        "rating": 2.5,
+        "title": "Brian and Charles"
+    },
+    {
+        "id": 74295,
+        "date": "2022-07-24",
+        "review": "",
+        "rating": 2,
+        "title": "Crime and Punishment"
+    },
+    {
+        "id": 336660,
+        "date": "2022-07-22",
+        "review": "",
+        "rating": 4,
+        "title": "Mediterranea"
+    },
+    {
+        "id": 13972,
+        "date": "2022-07-18",
+        "review": "",
+        "rating": 2.5,
+        "title": "The Women"
+    },
+    {
+        "id": 174309,
+        "date": "2022-07-13",
+        "review": "",
+        "rating": 3,
+        "title": "Teenage"
+    },
+    {
+        "id": 36670,
+        "date": "2022-07-09",
+        "review": "",
+        "rating": 3,
+        "title": "Never Say Never Again"
+    },
+    {
+        "id": 8885,
+        "date": "2022-07-08",
+        "review": "",
+        "rating": 4.5,
+        "title": "Waltz with Bashir"
+    },
+    {
         "id": 4024,
         "date": "2022-07-06",
         "review": "",

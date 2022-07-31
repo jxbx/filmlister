@@ -13,6 +13,8 @@ const cancelForm = document.getElementById("cancelForm");
 const diaryItemContainer = document.getElementById("diaryItemContainer");
 const sortOptions = document.getElementById("sortOptions");
 const addToDiary = document.getElementById("addToDiary");
+const addFilm = document.getElementById("addFilm");
+const mainContainer = document.getElementById("mainContainer");
 
 filmSubmitForm.addEventListener("submit", submitForm);
 cancelForm.addEventListener("click", hideForm);
@@ -22,11 +24,29 @@ searchBar.addEventListener("input", populate);
 
 addToDiary.addEventListener("click", submitForm);
 
+addFilm.addEventListener("click", toggleSearch);
+
 let currentId = "";
 let currentTitle = "";
+let mainContainerVisibility = false;
 
 
 let diaryContent = justinDiary;
+
+function toggleSearch() {
+
+
+  switch(mainContainerVisibility) {
+    case false:
+      mainContainer.style.display = "block";
+      mainContainerVisibility = true;
+    break;
+    case true:
+      mainContainer.style.display = "none";
+      mainContainerVisibility = false;
+    break;
+  }
+}
 
 function clearSearch() {
   while (searchList.hasChildNodes()) {
@@ -146,6 +166,11 @@ function hideForm() {
   formContainer.style.display = "none";
 }
 
+function resetSearch() {
+  searchBar.value = "";
+  clearSearch();
+}
+
 function clearAll() {
   while (cardContainer.firstChild) {
     cardContainer.removeChild(cardContainer.lastChild);
@@ -167,6 +192,8 @@ function submitForm() {
   clearAll();
   hideForm();
   updateDiary();
+  resetSearch();
+  toggleSearch();
 }
 
 async function updateDiary() {
@@ -250,7 +277,7 @@ async function updateDiary() {
 
     const diaryItemMoreInfo = document.createElement("p");
     diaryItemMoreInfo.setAttribute("class", "diaryItemMoreInfo");
-    diaryItemMoreInfo.innerHTML = originalLanguage + " " + date + "<br>" + printRating(entry) + "<br>" + "viewed on " + viewedDate;
+    diaryItemMoreInfo.innerHTML = originalLanguage + " " + date + "<br>" + "<span style=\"color: #3abfcf\">" + printRating(entry) + "</span> <br>" + "viewed on " + viewedDate;
 
     const removeButton = document.createElement("button");
     removeButton.innerText = "×";
@@ -395,20 +422,17 @@ let selection = sortOptions.options[sortOptions.selectedIndex].value;
   }
 }
 
-
-
-async function languages(input) {
-
-  let array = [];
-
-  for (const item of diaryContent){
-    const url = "https://api.themoviedb.org/3/movie/" + item.id + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
-    const request = new Request(url);
-    const response = await fetch(request);
-    const movie = await response.json();
-
-    array.push(movie.original_language);
-  }
-  return array;
-
-}
+// async function languages(input) {
+//
+//   let array = [];
+//
+//   for (const item of diaryContent){
+//     const url = "https://api.themoviedb.org/3/movie/" + item.id + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
+//     const request = new Request(url);
+//     const response = await fetch(request);
+//     const movie = await response.json();
+//
+//     array.push(movie.original_language);
+//   }
+//   return array;
+// }

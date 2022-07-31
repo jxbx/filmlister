@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..500&display=swap');
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,13 +13,11 @@ html {
 
 body {
   background-color: orange;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
-  display: flex;
-  justify-content: flex-start;
   margin: 0;
-  column-gap: 5rem;
   color: white;
+  overflow: hidden;
 }
 
 ul {
@@ -42,6 +42,13 @@ p {
   color: white;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
 .searchItemMoreInfo {
   color: grey;
 }
@@ -49,8 +56,14 @@ p {
 #mainContainer {
   background: black;
   height: 100vh;
-  width: 25rem;
+  width: 100%;
   overflow: hidden;
+  display: none;
+}
+
+#searchContainer {
+  width: inherit;
+  height: inherit;
 }
 
 #searchBar {
@@ -62,20 +75,26 @@ p {
   width: inherit;
 }
 
+#cardContainer {
+  width: inherit;
+  height: inherit;
+  background: inherit;
+}
 .container {
-  width: 100%;
+  width: 25rem;
   height: 100vh;
+  background: black;
 }
 
 #diaryContainer {
   height: 100vh;
-  width: 25rem;
+  width: 100%;
   background: black;
   overflow-y: scroll;
 }
 
 .cardImg {
-  width: 25rem;
+  width: 100%;
 }
 
 .posterThumbnail {
@@ -101,6 +120,9 @@ p {
 
 #formContainer {
   display: none;
+  width: inherit;
+  background: inherit;
+  height: inherit;
 }
 
 #filmSubmitForm {
@@ -137,7 +159,7 @@ p {
 
 .removeButton {
   margin-left: auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: none;
   color: white;
   border: none;
@@ -179,7 +201,7 @@ p {
 #ratingYellowBg {
   width: 0;
   height: 1.35rem;
-  background: white;
+  background: #3abfcf;
 
   position: absolute;
   left: 0.2rem;
@@ -204,15 +226,40 @@ textarea {
 }
 
 #sortContainer {
-  height: 3rem;
+  height: 5rem;
   background: #2e2e2e;
-  padding: 1rem;
+  padding: 0.5rem;
   position: fixed;
   width: inherit;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 
 #diaryList {
   display: block;
-  padding: 2rem 0 0 0;
+  padding: 4rem 0 0 0;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  #mainContainer {
+    display: block;
+    width: 25rem;
+  }
+
+  #addFilm {
+    display: none;
+  }
+
+  #diaryContainer {
+    width: 50rem;
+  }
 }
