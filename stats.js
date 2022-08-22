@@ -59,7 +59,7 @@ myRatings.sort((a,b) => {
     return a - b ;
   });
 
-  console.log(myRatings);
+
 
 userRatings.sort((a,b) => {
     return a.rating - b.rating;

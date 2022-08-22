@@ -1,5 +1,19 @@
 const justinDiary = [
     {
+        "id": 429200,
+        "date": "2022-08-02",
+        "review": "",
+        "rating": 5,
+        "title": "Good Time"
+    },
+    {
+        "id": 78450,
+        "date": "2022-07-31",
+        "review": "A complex urban drama with strong influences from European art cinema. The languid pacing, social alienation and thematic fascination with the substance and meaning of photographic images reminded me of Antonioni. By contrast, the layered narrative building towards a big climax reminded my of Michael Mann's film \"Heat\". I loved the visual style of the film, with its strong use of colour within a simple, naturalistic lighting scheme.",
+        "rating": 3.5,
+        "title": "Terrorizers"
+    },
+    {
         "id": 453270,
         "date": "2022-07-30",
         "review": "",
@@ -16,7 +30,7 @@ const justinDiary = [
     {
         "id": 489471,
         "date": "2022-07-25",
-        "review": "",
+        "review": "I watched this during a deep dive into the world of climbing, so I definitely found the subject matter interesting, but the style of the documentary was too conventional and a bit cheesy. ",
         "rating": 2.5,
         "title": "The Dawn Wall"
     },
@@ -492,7 +506,7 @@ const justinDiary = [
     {
         "id": 554230,
         "date": "2022-01-02",
-        "review": "",
+        "review": "A quiet, compelling drama which shows that the short story format can be adapted to film with great success. I loved how the film's conflict and intrigue developed from the simplest premise, and I liked the gradual exposition of Olivia Coleman's character over the course of the whole film.",
         "rating": 4.5,
         "title": "The Lost Daughter"
     }
