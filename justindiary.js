@@ -1,5 +1,19 @@
 const justinDiary = [
     {
+        "id": 762504,
+        "date": "2022-08-20",
+        "review": "",
+        "rating": 3,
+        "title": "Nope"
+    },
+    {
+        "id": 42741,
+        "date": "2022-08-13",
+        "review": "",
+        "rating": 2.5,
+        "title": "Un flic"
+    },
+    {
         "id": 429200,
         "date": "2022-08-02",
         "review": "",
