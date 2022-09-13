@@ -1,5 +1,89 @@
 const justinDiary = [
     {
+        "id": 20482,
+        "date": "2022-09-10",
+        "review": "",
+        "rating": 4.5,
+        "title": "The Naked City"
+    },
+    {
+        "id": 28297,
+        "date": "2022-09-10",
+        "review": "",
+        "rating": 3.5,
+        "title": "Brute Force"
+    },
+    {
+        "id": 632617,
+        "date": "2022-09-08",
+        "review": "",
+        "rating": 3,
+        "title": "C'mon C'mon"
+    },
+    {
+        "id": 775400,
+        "date": "2022-09-02",
+        "review": "",
+        "rating": 2.5,
+        "title": "A Banquet"
+    },
+    {
+        "id": 396194,
+        "date": "2022-08-31",
+        "review": "",
+        "rating": 3,
+        "title": "Ennio"
+    },
+    {
+        "id": 740749,
+        "date": "2022-08-31",
+        "review": "",
+        "rating": 4,
+        "title": "Call Me Human"
+    },
+    {
+        "id": 680813,
+        "date": "2022-08-30",
+        "review": "",
+        "rating": 5,
+        "title": "Flee"
+    },
+    {
+        "id": 776717,
+        "date": "2022-08-30",
+        "review": "",
+        "rating": 3,
+        "title": "Wild Men"
+    },
+    {
+        "id": 9509,
+        "date": "2022-08-29",
+        "review": "",
+        "rating": 1.5,
+        "title": "Man on Fire"
+    },
+    {
+        "id": 501170,
+        "date": "2022-08-29",
+        "review": "",
+        "rating": 3.5,
+        "title": "Doctor Sleep"
+    },
+    {
+        "id": 24650,
+        "date": "2022-08-26",
+        "review": "",
+        "rating": 4,
+        "title": "The Fountainhead"
+    },
+    {
+        "id": 34148,
+        "date": "2022-08-24",
+        "review": "",
+        "rating": 3.5,
+        "title": "Imitation of Life"
+    },
+    {
         "id": 762504,
         "date": "2022-08-20",
         "review": "",
