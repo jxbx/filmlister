@@ -1,5 +1,47 @@
 const justinDiary = [
     {
+        "id": 290098,
+        "date": "2022-11-06",
+        "review": "",
+        "rating": 4,
+        "title": "The Handmaiden"
+    },
+    {
+        "id": 50037,
+        "date": "2022-10-30",
+        "review": "",
+        "rating": 3.5,
+        "title": "Beyond the Black Rainbow"
+    },
+    {
+        "id": 11513,
+        "date": "2022-10-27",
+        "review": "",
+        "rating": 2.5,
+        "title": "Cobra Verde"
+    },
+    {
+        "id": 30497,
+        "date": "2022-10-26",
+        "review": "",
+        "rating": 3.5,
+        "title": "The Texas Chain Saw Massacre"
+    },
+    {
+        "id": 724495,
+        "date": "2022-10-25",
+        "review": "",
+        "rating": 3,
+        "title": "The Woman King"
+    },
+    {
+        "id": 58251,
+        "date": "2022-10-23",
+        "review": "",
+        "rating": 3,
+        "title": "Daddy Longlegs"
+    },
+    {
         "id": 19997,
         "date": "2022-10-17",
         "review": "",
