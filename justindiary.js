@@ -1,5 +1,68 @@
 const justinDiary = [
     {
+        "id": 94706,
+        "date": "2022-11-25",
+        "review": "",
+        "rating": 3,
+        "title": "The Quince Tree Sun"
+    },
+    {
+        "id": 791177,
+        "date": "2022-11-24",
+        "review": "",
+        "rating": 3,
+        "title": "Bones and All"
+    },
+    {
+        "id": 265189,
+        "date": "2022-11-23",
+        "review": "",
+        "rating": 4,
+        "title": "Force Majeure"
+    },
+    {
+        "id": 497828,
+        "date": "2022-11-21",
+        "review": "",
+        "rating": 2.5,
+        "title": "Triangle of Sadness"
+    },
+    {
+        "id": 776551,
+        "date": "2022-11-20",
+        "review": "",
+        "rating": 4,
+        "title": "Faya Dayi"
+    },
+    {
+        "id": 931,
+        "date": "2022-11-19",
+        "review": "",
+        "rating": 3.5,
+        "title": "Don't Look Now"
+    },
+    {
+        "id": 253450,
+        "date": "2022-11-18",
+        "review": "",
+        "rating": 2.5,
+        "title": "The Assassin"
+    },
+    {
+        "id": 705996,
+        "date": "2022-11-14",
+        "review": "",
+        "rating": 3,
+        "title": "Decision to Leave"
+    },
+    {
+        "id": 934,
+        "date": "2022-11-10",
+        "review": "",
+        "rating": 4,
+        "title": "Rififi"
+    },
+    {
         "id": 290098,
         "date": "2022-11-06",
         "review": "",
@@ -75,6 +138,13 @@ const justinDiary = [
         "review": "",
         "rating": 3,
         "title": "Widows"
+    },
+    {
+        "id": 414030,
+        "date": "2022-09-13",
+        "review": "",
+        "rating": 3,
+        "title": "The Image Book"
     },
     {
         "id": 581734,
