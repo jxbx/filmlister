@@ -6,43 +6,22 @@
         <meta name="viewport" content="width=device-width">
         <title>Film stats v0.1</title>
         <script src="./justindiary.js" defer></script>
-        
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./stats2.js" defer></script>   
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="stylesheet" href="./stats2.css">
     </head>
 
-    <div>
-        <canvas id="myChart"></canvas>
+    <div class="chart1">
+        <canvas id="myRatings"></canvas>
+      </div>
+
+      <div class="chart1">
+        <canvas id="myDates"></canvas>
+      </div>
+
+      <div class="chart1">
+        <canvas id="allRatings"></canvas>
       </div>
       
-      
-      <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          options: {
-            legend: {
-                display: false
-            }
-          },
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 1],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-      </script>
-
 </html>
   
