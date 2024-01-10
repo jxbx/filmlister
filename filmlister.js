@@ -103,17 +103,18 @@ async function populate() {
   }
 }
 
+
 async function showCard() {
   searchContainer.style.display = "none";
   while (cardContainer.firstChild) {
     cardContainer.removeChild(cardContainer.lastChild);
   }
 
-  const url = "https://api.themoviedb.org/3/movie/" + this.value + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
+  const url = "https://api.themoviedb.org/3/movie/" + this.value + "?api_key=f99dcdb2604d84233a9cf4e3f614828a" + "&append_to_response=credits";
   const request = new Request(url);
   const response = await fetch(request);
   const movie = await response.json();
-
+  const director = movie.credits.crew.filter(({job})=> job ==="Director")[0].name;
   currentId = movie.id;
   currentTitle = movie.title;
 
@@ -122,6 +123,7 @@ async function showCard() {
   moreInfo.push(movie.title);
   if (movie.original_language !== "en" && movie.original_title !== movie.title) moreInfo.push(movie.original_title);
   moreInfo.push(movie.release_date.slice(0, 4));
+  moreInfo.push("Directed by " + director);
   if (movie.spoken_languages.length >= 1) moreInfo.push(movie.spoken_languages[0].english_name);
   moreInfo.push(movie.overview);
 
@@ -322,16 +324,18 @@ async function showDiaryItem(input) {
 
   const entry = diaryContent.find(element => element.id == input.id);
 
-  const url = "https://api.themoviedb.org/3/movie/" + input.id + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
+  const url = "https://api.themoviedb.org/3/movie/" + input.id + "?api_key=f99dcdb2604d84233a9cf4e3f614828a" + "&append_to_response=credits";
   const request = new Request(url);
   const response = await fetch(request);
   const movie = await response.json();
+  const director = movie.credits.crew.filter(({job})=> job === "Director")[0].name
 
   let moreInfo = [];
 
   moreInfo.push(movie.title);
   if (movie.original_language !== "en" && movie.title !== movie.original_title) moreInfo.push(movie.original_title);
   moreInfo.push(movie.release_date.slice(0, 4));
+  moreInfo.push("Directed by " + director);
   if (movie.spoken_languages.length >= 1) moreInfo.push(movie.spoken_languages[0].english_name);
   moreInfo.push(printRating(entry));
   (entry.review.length === 0) ? moreInfo.push("no review yet") : moreInfo.push(entry.review);
