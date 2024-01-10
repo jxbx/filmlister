@@ -157,6 +157,7 @@ function showForm() {
   cardContainer.style.display = "none";
   formContainer.style.display = "flex";
   formTitle.innerText = currentTitle;
+  dateInput.valueAsDate = new Date();
 }
 
 function hideForm() {
@@ -212,8 +213,7 @@ async function updateDiary() {
 
     const date = movie.release_date.slice(0, 4);
     const originalLanguage = (movie.original_language === "en" || movie.title === movie.original_title) ? "" : movie.original_title + ", ";
-    const viewedDate = new Date(entry.date).toString().slice(3,15);
-
+    const viewedDate = new Date(entry.date).toString().slice(3, 15);
     const diaryItem = document.createElement("li");
 
     diaryItem.setAttribute("class", "diaryItem");
@@ -281,7 +281,7 @@ async function updateDiary() {
 
     const removeButton = document.createElement("button");
     removeButton.innerText = "×";
-    removeButton.setAttribute("class", "removeButton")
+    removeButton.setAttribute("class", "removeButton")        
     removeButton.addEventListener("click", function () {
       diaryContent = diaryContent.filter(item => item.id != entry.id);
       document.getElementById(entry.id).remove();
