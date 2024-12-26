@@ -320,7 +320,7 @@ async function showDiaryItem(input) {
   diaryList.style.display = "none";
   sortContainer.style.display = "none"
 
-  const entry = diaryContent.find(element => element.id == input.id);
+  const entry = stintent.find(element => element.id == input.id);
 
   const url = "https://api.themoviedb.org/3/movie/" + input.id + "?api_key=f99dcdb2604d84233a9cf4e3f614828a";
   const request = new Request(url);
